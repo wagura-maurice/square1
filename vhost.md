@@ -4,7 +4,7 @@ server {
 listen 80;
 listen [::]:80;
 
-        root /var/www/html/impact/current/public;
+        root /var/www/html/square1/current/public;
         index index.php index.html index.htm index.nginx-debian.html;
 
         server_name square1.waguramaurice.com;
