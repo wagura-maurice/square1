@@ -11,14 +11,6 @@ object-assign
   */
 
 /*!
- * Pusher JavaScript Library v7.0.3
- * https://pusher.com/
- *
- * Copyright 2020, Pusher
- * Released under the MIT licence.
- */
-
-/*!
  * Toastify js 1.9.3
  * https://github.com/apvarun/toastify-js
  * @license MIT licensed
