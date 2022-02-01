@@ -7,7 +7,7 @@ listen [::]:80;
         root /var/www/html/impact/current/public;
         index index.php index.html index.htm index.nginx-debian.html;
 
-        server_name square1.waguramaurice.com www.square1.waguramaurice.com;
+        server_name square1.waguramaurice.com;
 
         location / {
                 try_files $uri $uri/ /index.php?$query_string;

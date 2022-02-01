@@ -40,7 +40,7 @@ task('release:theBaby', function () {
     // Optimize Application
     run('{{bin/php}} {{release_path}}/artisan app:optimize');
     // Run database migrations
-    // run('{{bin/php}} {{release_path}}/artisan migrate:fresh --seed --force');
+    run('{{bin/php}} {{release_path}}/artisan migrate:fresh --seed --force');
     // serve the app up
     run('{{bin/php}} {{release_path}}/artisan up');
 })->once();
