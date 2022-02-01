@@ -1,4 +1,4 @@
-sudo nano /etc/nginx/sites-available/airtime254.co.ke
+sudo nano /etc/nginx/sites-available/square1.waguramaurice.com
 
 server {
 listen 80;
@@ -7,7 +7,7 @@ listen [::]:80;
         root /var/www/html/impact/current/public;
         index index.php index.html index.htm index.nginx-debian.html;
 
-        server_name airtime254.co.ke www.airtime254.co.ke;
+        server_name square1.waguramaurice.com www.square1.waguramaurice.com;
 
         location / {
                 try_files $uri $uri/ /index.php?$query_string;
@@ -30,4 +30,4 @@ listen [::]:80;
 
 }
 
-sudo ln -s /etc/nginx/sites-available/airtime254.co.ke /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/square1.waguramaurice.com /etc/nginx/sites-enabled/
