@@ -1,0 +1,91 @@
+implement settings and error logging logic
+
+implement user roles logic
+
+develop core business logic:
+    partyA - the account sending airtime credit
+    partyB - the account receiving airtime credit
+    Amount - the airtime credit amount
+    Account Reference - unique/auto-generated
+    Status - (process, processing, processed)
+
+    --- if no STK push ---
+        - send text message to partyA, with the payment details; paybill number, account reference and amount.
+
+purchase statements logic.
+    partyA - the MSISDN sending airtime credit
+    partyB - our paybill number
+    Account Reference - foreign key
+    Amount - the airtime credit amount
+    Transaction Code - unique
+    Transaction Date - timestamp
+    Status - (accepted, rejected)
+
+------------------------------------------------------------------------------------------------------------
+application client logic
+    model class to load all partyA's
+    query should be unique
+    order by date of last transaction
+
+    - purchase history : tally of all transactions, all total payments
+
+text messaging labels logic
+
+text messaging templates logic
+    Label ID - foreign key - nullable
+
+bulk text messaging logic
+    Receivers - MSISDN's in json string
+    Message - text content, including the wrapping.
+    Status - (publish, publishing, published) - i.e processing logic
+
+text messaging logic.
+    Template ID - foreign key - nullable
+    Bulk text message ID - foreign key - nullable
+    Receiver - an MSISDN
+    Message - text content
+    Status - (process, processing, processed)
+
+--------------------------------------------------------------------------------------------------
+
+implement api routing for mobile application:
+
+    POST request; for sending core business to server.
+        - partyA - the buyer
+        - partyB - the receiver
+        - Amount - the amount
+
+        - RESPONSE: Account Reference number, status.
+
+    POST request; for getting the status of core business processing from the server.
+    - shared preference ID
+
+    GET request; for getting users purchase statements.
+     - PartyA - the account number - phone number
+
+    POST request; for getting the mobile provider.
+        - phone number.
+        - RESPONSE is the name of the mobile provider.
+
+implement api routing for airtime credit provider:
+
+    POST - initiate purchase of airtime
+    POST - callback url
+
+
+--------------------------------------------------------------------------------------------------
+
+pa make:model ErrorLog -mcr
+pa make:model Setting -mcr
+pa make:model Role -mcr
+pa make:model Ability -mcr
+pa make:model AbilityRole -mcr
+pa make:model RoleUser -mcr
+pa make:model Core -mcr
+pa make:model Purchase -mcr
+
+pa make:model Client -mcr
+pa make:model Label -mcr
+pa make:model Template -mcr
+pa make:model BulkTextMessage -mcr
+pa make:model TextMessage -mcr

@@ -1,0 +1,19 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/js/bootstrap.bundle.min.js": "/js/bootstrap.bundle.min.js",
+    "/js/bootstrap.min.js.map": "/js/bootstrap.min.js.map",
+    "/js/main.js": "/js/main.js",
+    "/css/bootstrap.css": "/css/bootstrap.css",
+    "/css/pages/auth.css": "/css/pages/auth.css",
+    "/css/pages/error.css": "/css/pages/error.css",
+    "/css/pages/email.css": "/css/pages/email.css",
+    "/css/pages/chat.css": "/css/pages/chat.css",
+    "/css/pages/guest.css": "/css/pages/guest.css",
+    "/css/widgets/chat.css": "/css/widgets/chat.css",
+    "/css/widgets/todo.css": "/css/widgets/todo.css",
+    "/vendors/LICENSE": "/vendors/LICENSE",
+    "/vendors/README.md": "/vendors/README.md",
+    "/vendors/font-awesome-animation.scss": "/vendors/font-awesome-animation.scss",
+    "/vendors/package.json": "/vendors/package.json"
+}
